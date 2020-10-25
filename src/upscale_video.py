@@ -6,6 +6,7 @@ from tqdm import trange
 import constants
 import utils
 
+#A function that applies an upscaling to an image
 def upscale_image(model, img):
     img_scaled = utils.scaling(img)
     input = np.expand_dims(img_scaled, axis=0)
@@ -15,6 +16,7 @@ def upscale_image(model, img):
     out_img.clip(0, 255)
     return out_img
 
+#Gets all the frames from a video and upscale every frame with the model
 def upscale_video(source_video, model):
     video = cv2.VideoCapture(source_video)
     if (video.isOpened()== False): 
@@ -33,12 +35,13 @@ def upscale_video(source_video, model):
                 upscaled_frame_array[index] = upscale_image(model, frame)
     return upscaled_frame_array, framerate, frame_width, frame_height
 
+#Save the upscaled video into a .avi file
 def write_video(frame_array, framerate, upscaled_width, upscaled_height, filename):
     out_video = cv2.VideoWriter(filename,cv2.VideoWriter_fourcc('M','J','P','G'), framerate, (upscaled_width,upscaled_height))
     for frame in frame_array:
         out_video.write(frame)
     
-
+#Run the entire process to upscale a video and save the result into a file
 def run():
     if (len(sys.argv) != 3):
         print("help : python src/upscale_face.py SOURCE_IMAGE_PATH DESTINATION_FILE_PATH")
