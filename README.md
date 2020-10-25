@@ -37,7 +37,7 @@ python src/upscale_video.py SOURCE_VIDEO_PATH AVI_FILE_PATH
 ```
 
 ## Related works
-  Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network by Wenzhe Shi, Jose Caballero, Ferenc Huszár, Johannes Totz, Andrew P. Aitken, Rob Bishop, Daniel Rueckert, Zehan Wang
- BDS500 dataset from Contour Detection and Hierarchical Image Segmentation
+  - Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network by Wenzhe Shi, Jose Caballero, Ferenc Huszár, Johannes Totz, Andrew P. Aitken, Rob Bishop, Daniel Rueckert, Zehan Wang
+ - BDS500 dataset from Contour Detection and Hierarchical Image Segmentation
  P. Arbelaez, M. Maire, C. Fowlkes and J. Malik.
  IEEE TPAMI, Vol. 33, No. 5, pp. 898-916, May 2011.
