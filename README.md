@@ -33,5 +33,5 @@ python src/train.py DATASET_DIRECTORY_PATH
 
 ## use the model to upscale a video and save it into an .avi file
 ```bash
-python src/upscale_face.py SOURCE_VIDEO_PATH AVI_FILE_PATH
+python src/upscale_video.py SOURCE_VIDEO_PATH AVI_FILE_PATH
 ```

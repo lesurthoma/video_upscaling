@@ -37,7 +37,7 @@ def upscale_video(source_video, model):
 
 #Save the upscaled video into a .avi file
 def write_video(frame_array, framerate, upscaled_width, upscaled_height, filename):
-    out_video = cv2.VideoWriter(filename,cv2.VideoWriter_fourcc('M','J','P','G'), framerate, (upscaled_width,upscaled_height))
+    out_video = cv2.VideoWriter(filename+".avi",cv2.VideoWriter_fourcc('M','J','P','G'), framerate, (upscaled_width,upscaled_height))
     for frame in frame_array:
         out_video.write(frame)
     
